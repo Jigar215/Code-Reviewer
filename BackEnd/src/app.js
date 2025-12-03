@@ -1,11 +1,30 @@
-const express = require('express');
+// const express = require('express');
+// const aiRoutes = require('./routes/ai.routes');
 
+// const app = express();
+
+
+
+// app.get('/', (req, res) => {
+//   res.send('Hello, World!');
+// });
+
+// app.use('/ai', aiRoutes);
+
+// module.exports = app;
+
+import express from 'express';
+import aiRoutes from './routes/ai.routes.js'; // ⚠️ IMPORTANT: Don't forget the .js
 
 const app = express();
 
+// Good practice to allow JSON parsing
+app.use(express.json());
 
 app.get('/', (req, res) => {
   res.send('Hello, World!');
 });
 
-module.exports = app;
+app.use('/ai', aiRoutes);
+
+export default app;
