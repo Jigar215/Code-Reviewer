@@ -2,8 +2,7 @@
 
 An intelligent code review assistant powered by **Google Gemini AI**. This application allows developers to input code snippets, receive instant feedback, identify bugs, and get suggestions for optimization—all within a clean, modern interface.
 
-![Project Screenshot](./screenshot.png)
-*(Note: You can add the screenshot you showed me earlier here by naming it screenshot.png)*
+![Project Screenshot](./assets/screenshot.png)
 
 ## 🚀 Features
 
