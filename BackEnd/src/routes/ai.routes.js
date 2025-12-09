@@ -7,13 +7,25 @@
 
 // module.exports = router;
 
+
+
+// import express from 'express';
+// // ✅ Import the specific controller function
+// import { getResponse } from '../controllers/ai.controller.js';
+
+// const router = express.Router();
+
+// router.post('/get-review', getReview);
+
+// // ✅ Use 'export default' instead of module.exports
+// export default router;
+
+
 import express from 'express';
-// ✅ Import the specific controller function
-import { getResponse } from '../controllers/ai.controller.js';
+import { getReview } from '../controllers/ai.controller.js';
 
 const router = express.Router();
 
-router.get('/get-response', getResponse);
+router.post('/get-review', getReview);
 
-// ✅ Use 'export default' instead of module.exports
 export default router;
