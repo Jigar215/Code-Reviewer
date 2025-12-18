@@ -1,0 +1,26 @@
+# Location: /CODE-REVIEWER/docker-compose.yml
+
+version: '3.8'
+
+services:
+  backend:
+    build: ./BackEnd
+    ports:
+      - "5000:5000"
+    volumes:
+      - ./BackEnd:/app
+      - /app/node_modules
+    env_file:
+      - ./BackEnd/.env  # Loads your secret variables
+    environment:
+      - PORT=5000
+
+  frontend:
+    build: ./Frontend
+    ports:
+      - "5173:5173"
+    volumes:
+      - ./Frontend:/app
+      - /app/node_modules
+    environment:
+      - CHOKIDAR_USEPOLLING=true # Backup fix for Windows file watching
